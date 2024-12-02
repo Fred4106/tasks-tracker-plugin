@@ -6,7 +6,6 @@ import com.google.inject.Provides;
 import java.awt.Color;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
-import java.awt.image.BufferedImage;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,6 +35,7 @@ import net.reldo.taskstracker.data.task.TaskFromStruct;
 import net.reldo.taskstracker.data.task.TaskService;
 import net.reldo.taskstracker.data.task.TaskType;
 import net.reldo.taskstracker.data.task.filters.FilterService;
+import net.reldo.taskstracker.panel.Icons;
 import net.reldo.taskstracker.panel.TasksTrackerPluginPanel;
 import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
@@ -62,7 +62,6 @@ import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.plugins.PluginManager;
 import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
-import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.LinkBrowser;
 
 @Slf4j
@@ -140,10 +139,9 @@ public class TasksTrackerPlugin extends Plugin
 			forceUpdateVarpsFlag = true;
 		}
 
-		final BufferedImage icon = ImageUtil.loadImageResource(getClass(), "panel_icon.png");
 		navButton = NavigationButton.builder()
 			.tooltip("Task Tracker")
-			.icon(icon)
+			.icon(Icons.PANEL_ICON)
 			.priority(5)
 			.panel(pluginPanel)
 			.build();
