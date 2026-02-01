@@ -3,6 +3,8 @@ package net.reldo.taskstracker.panel.components;
 import java.awt.Dimension;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+
+import net.reldo.taskstracker.panel.Icons;
 import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.ui.components.IconTextField;
@@ -13,7 +15,7 @@ public class SearchBox extends IconTextField
 
 	public SearchBox()
 	{
-		this.setIcon(IconTextField.Icon.SEARCH);
+		this.setIcon(Icons.SEARCH_ICON);
 		this.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 20, 30));
 		this.setBackground(ColorScheme.DARKER_GRAY_COLOR);
 		this.setHoverBackgroundColor(ColorScheme.DARK_GRAY_HOVER_COLOR);
