@@ -9,7 +9,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -26,6 +25,8 @@ import net.runelite.client.ui.FontManager;
 import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.SwingUtil;
 
+import static net.reldo.taskstracker.panel.Icons.*;
+
 @Slf4j
 public abstract class FilterButtonPanel extends FilterPanel
 {
@@ -37,14 +38,6 @@ public abstract class FilterButtonPanel extends FilterPanel
     protected JPanel buttonPanel;
 
     protected JToggleButton collapseBtn;
-	private static final String expandBtnPath = "panel/components/";
-	private static final BufferedImage collapseImg = ImageUtil.loadImageResource(TasksTrackerPlugin.class, expandBtnPath + "filter_buttons_collapsed.png");
-	private static final Icon MENU_COLLAPSED_ICON = new ImageIcon(ImageUtil.alphaOffset(collapseImg, -180));
-	private static final Icon MENU_ICON_HOVER = new ImageIcon(collapseImg);
-	private static final BufferedImage expandedImg = ImageUtil.loadImageResource(TasksTrackerPlugin.class, expandBtnPath + "filter_buttons_expanded.png");
-	private static final Icon MENU_EXPANDED_ICON = new ImageIcon(ImageUtil.alphaOffset(expandedImg, -180));
-	private static final Icon MENU_ICON_HOVER_SELECTED = new ImageIcon(expandedImg);
-
 
     public FilterButtonPanel(TasksTrackerPlugin plugin, String label)
     {
